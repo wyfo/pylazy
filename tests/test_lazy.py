@@ -1,10 +1,3 @@
-# Pylazy
-
-A quick library to adds context-aware lazyness to function. 
-Actually, classical memoization way is not async-safe/context-aware, and this lib tries to offer a simple way to do it.
-
-# Tests - example
-```python
 from asyncio import gather
 from random import random
 
@@ -41,4 +34,3 @@ async def test_global():
 
     context_res = await gather(gafunc(), gafunc())
     assert context_res[0] == context_res[1]
-```
